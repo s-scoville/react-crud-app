@@ -18,13 +18,13 @@ const App = () => {
   const [currentUser, setCurrentUser] = useState(initialFormState)
 
   const addUser = (user) => {
-    user.id = users.length + 1
+    user.id = Math.max(0, ...users.map((user) => user.id)) + 1
     setUsers([...users, user])
   }
 
   const deleteUser = (id) => {
     setEditing(false)
-    
+
     setUsers(users.filter((user) => user.id !== id))
   }
 
