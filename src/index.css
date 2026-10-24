@@ -1,0 +1,202 @@
+:root {
+    /* Backgrounds */
+    --bg-primary: #10151e;
+    --bg-secondary: #1c2532;
+    --bg-tertiary: #283649;
+
+    /* Text */
+    --text-primary: #f0f3f8;
+    --text-secondary: #b5c2d3;
+    --text-muted: #94a3b8;
+
+    /* Accents */
+    --accent-primary: #78a6e8;
+    --accent-hover: #a1c4f4;
+
+    /* Borders */
+    --border-color: #303b4c;
+
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 0;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1,
+h2 {
+    font-variant: small-caps;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+h1 {
+    margin: 0 0 1.25rem;
+    font-size: 1.5rem;
+}
+
+h2 {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+}
+
+/* Form Styling */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight:500;
+}
+
+input {
+    width: 100%;
+    min-width: 0;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+input:focus {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 1px;
+}
+
+/* Button Styling */
+
+button {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--accent-primary);
+    border-radius: 6px;
+    background-color: var(--accent-primary);
+    color: var(--bg-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 2px;
+}
+
+form button:first-of-type {
+    margin-top: 0.5rem;
+}
+
+.muted-button,
+form button [type="button"] {
+    background-color: transparent;
+    color: var(--accent-primary);
+}
+
+.muted-button:hover,
+form button [type="button"]:hover {
+    background-color: var(--accent-primary);
+    color: var(--bg-primary);
+}
+
+/* User Table Styling */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+th,
+td {
+    padding: 0.65rem 0.4rem;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+th {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+td {
+    color: var(--text-primary);
+}
+
+td:last-child {
+    white-space: nowrap;
+}
+
+td button {
+    width: auto;
+    min-width: 65px;
+    margin: 0.15rem;
+    padding: 0.4rem 0.55rem;
+}
+
+/* Responsive Layout */
+
+.flex-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+}
+
+.flex-large {
+    min-width: 0;
+}
+
+@media (min-width: 760px) {
+    .flex-row {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+    }
+}
+
+@media (min-width: 480px) {
+    .container {
+        padding: 0.75rem;
+    }
+
+    h1 {
+        font-size: 1.35rem;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+    }
+
+    th,
+    td {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.8rem;
+    }
+}
