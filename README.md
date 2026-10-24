@@ -1,16 +1,75 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React CRUD App
 
-Currently, two official plugins are available:
+A simple CRUD (Create, Read, Update, Delete) application built with React 19 and Vite for CSC322 Web Programming at Sullivan University.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Overview
 
-## React Compiler
+This project follows Tania Rascia's [Build a CRUD App in React with Hooks](https://www.taniarascia.com/crud-app-in-react-with-hooks/) tutorial, adapted to use React 19 and Vite instead of Create React App.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The application will demonstrate how to manage user records using React functional components and Hooks. Users will be able to add, view, edit, and delete records without requiring a backend or database.
 
-## Expanding the ESLint configuration
+## Technologies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- JavaScript (JSX)
+- Vite
+- HTML5
+- CSS3
+
+## Features
+
+The following functionality is planned:
+
+- Display a list of users
+- Add new users
+- Edit existing user information
+- Delete users
+- Manage application state using React Hooks
+- Responsive styling consistent with my developer portfolio
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/s-scoville/react-crud-app.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd react-crud-app
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in the terminal.
+
+## Project Status
+
+**In Development**
+
+The initial React application structure has been established. CRUD functionality and custom styling will be implemented in subsequent updates.
+
+## Acknowledgments
+
+Based on [Build a CRUD App in React with Hooks](https://www.taniarascia.com/crud-app-in-react-with-hooks/) by Tania Rascia.
+
+The original tutorial uses Create React App. This implementation uses React 19 and Vite while preserving the tutorial's core functionality and component structure.
