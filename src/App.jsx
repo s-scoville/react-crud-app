@@ -23,6 +23,8 @@ const App = () => {
   }
 
   const deleteUser = (id) => {
+    setEditing(false)
+    
     setUsers(users.filter((user) => user.id !== id))
   }
 
@@ -59,7 +61,7 @@ const App = () => {
             </div>
           )}
         </div>
-        
+
         <div className="flex-large">
           <h2>View Users</h2>
           <UserTable users={users} editRow={editRow} deleteUser={deleteUser} />
