@@ -18,11 +18,16 @@
 
     font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
     color: var(--text-primary);
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
 }
 
 * {
     box-sizing: border-box;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) var(--bg-secondary);
 }
 
 body {
@@ -116,14 +121,26 @@ form button:first-of-type {
 }
 
 .muted-button,
-form button [type="button"] {
+form button[type="button"] {
     background-color: transparent;
     color: var(--accent-primary);
 }
 
 .muted-button:hover,
-form button [type="button"]:hover {
+form button[type="button"]:hover {
     background-color: var(--accent-primary);
+    color: var(--bg-primary);
+}
+
+button.delete-button {
+    background-color: transparent;
+    border-color: #b97580;
+    color: #d99aa4;
+}
+
+button.delete-button:hover {
+    background-color: #b97580;
+    border-color: #b97580;
     color: var(--bg-primary);
 }
 
@@ -131,6 +148,7 @@ form button [type="button"]:hover {
 
 table {
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
     font-size: 0.875rem;
 }
@@ -143,13 +161,27 @@ td {
     overflow-wrap: anywhere;
 }
 
+th:nth-child(1),
+th:nth-child(2) {
+    width: auto;
+}
+
+th:nth-child(3) {
+    width: 160px;
+}
+
 th {
     color: var(--text-secondary);
     font-weight: 600;
+    background-color: var(--bg-tertiary);
 }
 
 td {
     color: var(--text-primary);
+}
+
+tbody tr:hover {
+    background-color: rgba(120, 166, 232, 0.06);
 }
 
 td:last-child {
